@@ -16,7 +16,7 @@ This fork contains a version that relieves the user of the horrors of a ROS depe
 
 # 1. Quickstart / Minimal Setup
 
-Requires OpenCV (with nonfree if you want FABMAP), Boost, Eigen, Pangolin and g2o. Tested on 14.04 without any problems.
+Requires OpenCV (with nonfree if you want FABMAP), Boost, Eigen, Pangolin and g2o. Tested on 16.04 without any problems.
 
 # 2. Installation
 
