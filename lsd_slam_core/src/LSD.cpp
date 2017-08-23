@@ -47,18 +47,27 @@ GUI gui;
 RawLogReader * logReader = 0;
 int numFrames = 0;
 
-std::string &ltrim(std::string &s) {
+
+std::string &ltrim(std::string &s)
+{
         s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
         return s;
 }
-std::string &rtrim(std::string &s) {
+
+std::string &rtrim(std::string &s)
+{
         s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
         return s;
 }
-std::string &trim(std::string &s) {
+
+
+std::string &trim(std::string &s)
+{
         return ltrim(rtrim(s));
 }
-int getdir (std::string dir, std::vector<std::string> &files)
+
+
+int getdir(std::string dir, std::vector<std::string> &files)
 {
     DIR *dp;
     struct dirent *dirp;
@@ -87,6 +96,7 @@ int getdir (std::string dir, std::vector<std::string> &files)
 
     return files.size();
 }
+
 
 int getFile (std::string source, std::vector<std::string> &files)
 {
@@ -209,6 +219,7 @@ void run(SlamSystem * system, Undistorter* undistorter, Output3DWrapper* outputW
 
     lsdDone.assignValue(true);
 }
+
 
 int main( int argc, char** argv )
 {
