@@ -25,6 +25,10 @@ set(CMAKE_CXX_FLAGS
    "${CMAKE_CXX_FLAGS} -msse4.1 -msse3 -msse2 -msse -march=native -O3 -std=c++0x"
 ) 
 
+# prevent optimizations for debug mode
+#set(CMAKE_CXX_FLAGS_DEBUG "-O0")
+#set(CMAKE_C_FLAGS_DEBUG "-O0")
+
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g") 
 
 # Set source files
