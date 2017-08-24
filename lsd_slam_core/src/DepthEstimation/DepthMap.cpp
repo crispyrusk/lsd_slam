@@ -1308,6 +1308,7 @@ void DepthMap::createKeyFrame(Frame* new_keyframe)
 	// Update depth in keyframe
 
 	gettimeofday(&tv_start, NULL);
+    // TODO(Kiran) Trace
 	activeKeyFrame->setDepth(currentDepthMap);
 	gettimeofday(&tv_end, NULL);
 	msSetDepth = 0.9*msSetDepth + 0.1*((tv_end.tv_sec-tv_start.tv_sec)*1000.0f + (tv_end.tv_usec-tv_start.tv_usec)/1000.0f);

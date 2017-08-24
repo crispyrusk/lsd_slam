@@ -469,6 +469,7 @@ void SlamSystem::createNewCurrentKeyframe(std::shared_ptr<Frame> newKeyframeCand
 	}
 
 	// propagate & make new.
+    // TODO(Kiran) Trace
 	map->createKeyFrame(newKeyframeCandidate.get());
 
 	if(printPropagationStatistics)
@@ -782,6 +783,7 @@ bool SlamSystem::doMappingIteration()
 		if (createNewKeyFrame)
 		{
 			finishCurrentKeyframe();
+            // TODO(Kiran): Trace
 			changeKeyframe(false, true, 1.0f);
 
 

@@ -199,6 +199,7 @@ void Frame::calculateMeanInformation()
 void Frame::setDepth(const DepthMapPixelHypothesis* newDepth)
 {
 
+	// TODO(Kiran) Trace
 	boost::shared_lock<boost::shared_mutex> lock = getActiveLock();
 	boost::unique_lock<boost::mutex> lock2(buildMutex);
 
